@@ -1,20 +1,10 @@
-import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import { useGLTF } from "@react-three/drei";
+import Image from "next/image";
+import img from "../../../public/models/dev.jpg";
 
-const ModelViewer = () => {
+const ModelViewer = (props: any) => {
   return (
-    <div className="h-[100vh] w-[100vw]">
-      <h1>Model Viewer</h1>
-
-      <Canvas>
-        <OrbitControls />
-
-        <mesh>
-            <boxGeometry args={[1, 1, 1]} />
-            <meshStandardMaterial color="hotpink" />
-        </mesh>
-      </Canvas>
-    </div>
+    <Image src={img} alt='hfjdh' />
   );
 };
 
