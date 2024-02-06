@@ -1,9 +1,12 @@
 import { Environment, OrbitControls, Text } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import Model from "../public/models/earth/Earth";
+import { Canvas, useFrame } from "@react-three/fiber";
+import Earth from "../public/models/earth/Earth";
 import Dragon from "../public/models/dragon/Dragon";
+import { MutableRefObject, useRef } from "react";
+import ModelViewer from "@/src/components/ModelViewer";
 
 const Home = () => {
+
   return (
     <div>
       <Canvas>
@@ -12,9 +15,10 @@ const Home = () => {
         <Environment preset="night" /> // A predefinição pode ser alterada para
         qualquer outro efeito de iluminação.
         <mesh>
-          {/* <Model /> */}
+          {/* <Earth /> */}
           <Text>Silver Dragon Mir4</Text>
           <Dragon />
+          {/* <ModelViewer /> */}
         </mesh>
       </Canvas>
     </div>
